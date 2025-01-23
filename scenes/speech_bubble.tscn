@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://7dm8n2axnmyr"]
+
+[node name="speech_bubble" type="Control"]
+texture_filter = 1
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_top = -103.0
+offset_right = 254.0
+offset_bottom = 8.0
+alignment = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
+texture_filter = 2
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_font_sizes/normal_font_size = 9
+bbcode_enabled = true
+text = "HEY IM 
+[shake]DANDY MASOO!!
+RANDY MAGOOO....... 
+DANDY MALOOOO"
+fit_content = true
+scroll_active = false

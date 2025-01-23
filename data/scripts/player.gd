@@ -29,3 +29,6 @@ func _physics_process(_delta: float) -> void:
 func get_player_input() -> void:
 	var vector := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = vector * speed
+	
+func speak(words: String) -> void:
+	pass
