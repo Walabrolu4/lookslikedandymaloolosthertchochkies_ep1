@@ -2,14 +2,13 @@
 
 [ext_resource type="Script" path="res://data/scripts/speech_bubble_controller.gd" id="1_mttf4"]
 
-[node name="speech_bubble" type="Control" node_paths=PackedStringArray("text_label")]
+[node name="speech_bubble" type="Control"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_mttf4")
-text_label = NodePath("VBoxContainer/RichTextLabel")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
@@ -25,10 +24,9 @@ layout_mode = 2
 size_flags_vertical = 10
 theme_override_font_sizes/normal_font_size = 9
 bbcode_enabled = true
-text = "[center] Hello! awdawdawd waDwad
-awd
-awd
-awd
-aw [/center]"
+text = "HEY IM 
+[shake]DANDY MASOO!!
+RANDY MAGOOO....... 
+DANDY MALOOOO"
 fit_content = true
 scroll_active = false

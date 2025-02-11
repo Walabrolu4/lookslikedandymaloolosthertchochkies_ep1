@@ -4,9 +4,14 @@ extends CharacterBody2D
 
 @export var walking_particle : GPUParticles2D
 @export var sprite:Sprite2D
+@export var speech_bubble: Control
+signal speak(words)
 
 func _ready() -> void:
 	walking_particle.emitting = false
+	say("[shake] Hello! How are you doing I am dandyMaloo [/shake]")
+
+
 
 func _process(_delta: float) -> void:
 	get_player_input()
@@ -30,5 +35,6 @@ func get_player_input() -> void:
 	var vector := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = vector * speed
 	
-func speak(words: String) -> void:
-	pass
+func say(words: String) -> void:
+	print("SIGNAL GET")
+	speak.emit(words)

@@ -107,9 +107,10 @@ material = SubResource("CanvasItemMaterial_vnxxb")
 process_material = SubResource("ParticleProcessMaterial_fvx4o")
 texture = SubResource("GradientTexture2D_j4aci")
 
-[node name="text" parent="." instance=ExtResource("4_ar0q6")]
-anchors_preset = 0
-offset_left = -38.0
-offset_top = -13.0
-offset_right = 37.0
-offset_bottom = 12.0
+[node name="speech_bubble" parent="." instance=ExtResource("4_ar0q6")]
+offset_left = -126.0
+offset_top = -14.0
+offset_right = -126.0
+offset_bottom = -14.0
+
+[connection signal="speak" from="." to="speech_bubble" method="_on_player_character_speak"]
