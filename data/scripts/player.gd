@@ -9,7 +9,7 @@ signal speak(words)
 
 func _ready() -> void:
 	walking_particle.emitting = false
-	say("[shake] Hello! How are you doing I am dandyMaloo [/shake]")
+	say("[shake] Hello! How are \nyou doing \nI\n am dandyMaloo [/shake]")
 
 
 
