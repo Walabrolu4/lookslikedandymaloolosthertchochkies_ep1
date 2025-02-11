@@ -4,14 +4,15 @@ extends CharacterBody2D
 
 @export var walking_particle : GPUParticles2D
 @export var sprite:Sprite2D
-@export var speech_bubble: Control
+
+
 signal speak(words)
+signal set_light_energy(energy)
 
 func _ready() -> void:
 	walking_particle.emitting = false
-	say("[shake] Hello! How are \nyou doing \nI\n am dandyMaloo [/shake]")
-
-
+	say("[shake] Hello! How are you doing? \nI\n am dandyMaloo!!!!! [/shake]")
+	set_light_energy.emit(2)
 
 func _process(_delta: float) -> void:
 	get_player_input()
@@ -25,7 +26,6 @@ func _process(_delta: float) -> void:
 			sprite.scale.x = 1
 	else:
 		walking_particle.emitting = false
-
 
 func _physics_process(_delta: float) -> void:
 	move_and_slide()

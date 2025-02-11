@@ -29,5 +29,6 @@ func jitter() -> void:
 	light_a.position = p
 	var e := randf_range(jitter_min_energy, 1.0)
 	light_a.energy = e
-	
-	
+
+func _on_player_character_set_light_energy(energy: Variant) -> void:
+	light_a.energy = energy

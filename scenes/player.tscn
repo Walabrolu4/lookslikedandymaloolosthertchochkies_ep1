@@ -113,4 +113,5 @@ offset_top = -14.0
 offset_right = -126.0
 offset_bottom = -14.0
 
+[connection signal="set_light_energy" from="." to="Light" method="_on_player_character_set_light_energy"]
 [connection signal="speak" from="." to="speech_bubble" method="_on_player_character_speak"]
