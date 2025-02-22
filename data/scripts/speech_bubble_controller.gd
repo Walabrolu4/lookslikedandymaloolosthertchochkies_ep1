@@ -8,13 +8,18 @@ const WORD_DELAY = 0.3
 
 @export var custom_text: String
 @export var text_label: RichTextLabel
-
+var is_speaking:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	text_label.visible_ratio = 0.0
 
 func _on_player_character_speak(words: Variant) -> void:
+	
+	if is_speaking:
+		print("ALREADY SPEAKING")
+		return
+	is_speaking = true
 	print(words)
 	text_label.visible_ratio = 0.0
 	var tween = create_tween()
@@ -29,5 +34,7 @@ func _on_player_character_speak(words: Variant) -> void:
 	
 	text_label.text = ""
 	text_label.visible_ratio = 0.0
+	print("Done Speaking")
+	is_speaking = false
 	
 	

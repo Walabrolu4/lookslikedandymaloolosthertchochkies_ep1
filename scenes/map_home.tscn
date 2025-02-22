@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://dhbb02t8ihgkw"]
+[gd_scene load_steps=45 format=4 uid="uid://dhbb02t8ihgkw"]
 
 [ext_resource type="Texture2D" uid="uid://btk3qqxm3niwk" path="res://data/sprite_sheets/BG.png" id="1_go3r5"]
 [ext_resource type="Script" path="res://data/scripts/level_controller.gd" id="1_hfda8"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://dc2grvkfn54j2" path="res://data/sprites/kitchen_sink.png" id="11_b5ctp"]
 [ext_resource type="Texture2D" uid="uid://bt7m2y1cockj5" path="res://data/sprites/litter_mat.png" id="12_u6r7w"]
 [ext_resource type="Texture2D" uid="uid://ckflrpy3yebt5" path="res://data/sprite_sheets/Test_bike_01.png" id="12_ub8iw"]
+[ext_resource type="PackedScene" uid="uid://cmpa48uo3bafb" path="res://scenes/interactor_collision.tscn" id="24_0nqm0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_11hab"]
 texture = ExtResource("3_o8roe")
@@ -256,13 +257,8 @@ texture = ExtResource("6_52758")
 texture = ExtResource("7_7omm0")
 0:0/0 = 0
 1:0/0 = 0
-2:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
-2:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xn6q"]
 texture = ExtResource("9_3urrk")
@@ -402,3 +398,16 @@ visible = false
 offset_left = 160.0
 offset_right = 800.0
 offset_bottom = 864.0
+
+[node name="Triggers" type="Node" parent="."]
+
+[node name="litter_box_interact_trigger" parent="Triggers" instance=ExtResource("24_0nqm0")]
+position = Vector2(464, 304)
+words = " Eat da poo poo"
+
+[node name="litter_box_interact_trigger2" parent="Triggers" instance=ExtResource("24_0nqm0")]
+position = Vector2(464, 336)
+words = " Eat da poo poo"
+
+[connection signal="body_exited" from="Triggers/litter_box_interact_trigger" to="Triggers/litter_box_interact_trigger" method="_on_body_exited"]
+[connection signal="body_exited" from="Triggers/litter_box_interact_trigger2" to="Triggers/litter_box_interact_trigger2" method="_on_body_exited"]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmpa48uo3bafb"]
+
+[ext_resource type="Script" path="res://data/scripts/interactor_collision.gd" id="1_g0xru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv2fx"]
+
+[node name="interact_trigger" type="Area2D"]
+position = Vector2(1, 1)
+script = ExtResource("1_g0xru")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xv2fx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
