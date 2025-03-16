@@ -15,7 +15,7 @@ signal set_light_energy(energy)
 func _ready() -> void:
 	walking_particle.emitting = false
 	say("[shake] Hello! How are you doing? \nI\n am dandyMaloo!!!!! [/shake]")
-	set_light_energy.emit(2)
+	set_light_energy.emit(3)
 
 func _process(_delta: float) -> void:
 	get_player_input()

@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bme6ps2274tmt" path="res://data/sprite_sheets/map_bg_tilelayer.tres" id="1_6w063"]
 [ext_resource type="PackedScene" uid="uid://su528eja5orc" path="res://scenes/player.tscn" id="2_8m4rx"]
-[ext_resource type="Script" path="res://data/scripts/camera_2d.gd" id="3_bkqro"]
+[ext_resource type="Script" uid="uid://cutlv3o7ifxnx" path="res://data/scripts/camera_2d.gd" id="3_bkqro"]
 
 [node name="Map" type="Node"]
 

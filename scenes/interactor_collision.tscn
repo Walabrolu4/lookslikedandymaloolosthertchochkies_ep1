@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cmpa48uo3bafb"]
 
-[ext_resource type="Script" path="res://data/scripts/interactor_collision.gd" id="1_g0xru"]
+[ext_resource type="Script" uid="uid://c7porsmml6guy" path="res://data/scripts/interactor_collision.gd" id="1_g0xru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xv2fx"]
 

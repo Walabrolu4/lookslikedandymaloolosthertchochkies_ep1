@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7dm8n2axnmyr"]
 
-[ext_resource type="Script" path="res://data/scripts/speech_bubble_controller.gd" id="1_mttf4"]
+[ext_resource type="Script" uid="uid://3ra7xbd2w68h" path="res://data/scripts/speech_bubble_controller.gd" id="1_mttf4"]
 
 [node name="speech_bubble" type="Control" node_paths=PackedStringArray("text_label")]
 texture_filter = 1
